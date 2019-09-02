@@ -1,0 +1,370 @@
+<main role="main" class="container-fluid p-0">
+  <div class="row m-0 pagina">
+    <div class="container">
+      
+      <div class="col-12">
+        
+        <div class="row ml-0 mr-0 nav">
+          <nav class="navbar navbar-expand-lg navbar-dark  pl-0 col-12">
+              <a class="navbar-brand col-4 pl-0"><img src="../assets/avivatec1.png"></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbar" aria-controls="conteudoNavbar" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          
+              <div class="collapse navbar-collapse col-8" id="conteudoNavbar">
+                  <ul class="navbar-nav ml-auto pl-6 align-rigth" style="font-size: 18px">
+                    <li class="nav-item"> 
+                      <a class="nav-link text-white pr-4" href="#">Sobre nós</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white pr-4"  href="#">Como funciona</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white pr-4"  href="#">Precisa de ajuda?</a>
+                    </li>
+                    <li class="nav-item m-0 pr-0">
+                        <a class="nav-link text-white" href="#"><img src="../assets/ico_user.png" class="pr-2">Entrar</a>
+                    </li>
+                  </ul>
+                </div>
+          </nav>    
+        </div>
+    
+          <div class="row ml-0 mr-0 emprestimo">
+            <div class="col-12 text-center">
+              <span class="emprestimo-span text-white">Empréstimo <strong>online</strong></span>
+            </div>
+  
+            <div class="col-12 text-center descr-emprestimo text-muted">
+              <p class = "text-white">Faça seu pedido realizando a simulação e bora resolver suas finanças!</p>
+            </div>
+  
+            <div class="col-xs-2 col-md-4 col-lg-12 p-0 quanto-precisa">
+  
+              <div class="row ml-0 mr-0 align-items-end">
+                <div class="p-0 d-none d-lg-block">
+                  <img src="../assets/carteira.png" class="img-fluid">
+                </div>
+                <div class="pl-3 pr-3" style="width: calc(100% - 420px);">
+                  <div class="row m-0">
+                    <div class="col-lg-12 p-0 align-items-center">
+                      <img src="../assets/Group 7.png" class="img-fluid">
+                      <div class="card ml-4 mr-4 mt-3 border-0 card-quanto-precisa">
+                        <div class="card-header text-center bg-white border-0" *ngIf="!exibirFormSolicitacao">
+                          <h5 class="card-title m-0">De quanto você precisa?</h5>
+                        </div>
+                        <div class="card-body border-0" *ngIf="!exibirFormSolicitacao">
+                          <div class="row m-0">
+                            <div class="col-4 p-0 pr-3 pt-3">
+                              <div class="card  align-items-center">
+                                <button type="button" class="btn btn-warning w-100" (click)="formularioSolicitacao(700)">R$ 700,00</button>
+                            </div>
+                            </div>
+                            <div class="col-4 p-0 pr-3 pt-3">
+                              <div class="card w-100  align-items-center link">
+                                <button type="button" class="btn btn-warning w-100" (click)="formularioSolicitacao(2000)">R$ 2.000,00</button>
+                              </div>
+                            </div>
+                            <div class="col-4 p-0 pr-3 pt-3">
+                              <div class="card w-100  align-items-center link">
+                                <button type="button" class="btn btn-warning w-100" (click)="formularioSolicitacao(5000)">R$ 5.000,00</button>
+                              </div>
+                            </div>
+                            <div class="col-4 p-0 pr-3 pt-3">
+                              <div class="card w-100  align-items-center link">
+                                <button type="button" class="btn btn-warning w-100" (click)="formularioSolicitacao(10000)">R$ 10.000,00</button>
+                              </div>
+                            </div>
+                            <div class="col-4 p-0 pr-3 pt-3">
+                              <div class="card w-100  align-items-center link">
+                                <button type="button" class="btn btn-warning w-100" (click)="formularioSolicitacao(20000)">R$ 20.000,00</button>
+                              </div>
+                            </div>
+                            <div class="col-4 p-0 pr-3 pt-3">
+                              <div class="card w-100 align-items-center link">
+                                <button type="button" class="btn btn btn-light w-100" (click)="formularioSolicitacao(null)">OUTRO VALOR</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-body border-0" *ngIf="exibirFormSolicitacao">
+                          <div class="row m-0">
+                            <div class="col-12 p-0">
+                              <form [formGroup]="formSolicitacao">
+                                <div class="col-12">
+                                  <div class="form-group row">
+                                    <div class="col-12 p-0">
+                                      <label for="valor" class="pt-2 align-self-center">Valor solicitado</label>
+                                      <button (click)="voltar()" class="btn btn-outline-warning float-right">
+                                        << Voltar
+                                      </button>
+                                    </div> 
+                                    <div class="col-4 p-0"> 
+                                      <select class="form-control" id="valor" formControlName="valor" [disabled]="!outroValor">
+                                        <option *ngFor="let item of itensOutroValor">{{item.valor | currency:'BRL':'symbol-narrow':'.2'}}</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <div class="col-12 mb-2">
+                                    <input type="text" class="form-control" id="nome" formControlName="nome" placeholder="Insira seu nome">
+                                  </div>
+                                  <div class="alert alert-danger col-11 mb-2 ml-4" *ngIf="formSolicitacao.get('nome').invalid && formSolicitacao.get('nome').touched">
+                                      <div *ngIf="formSolicitacao.get('nome').errors.required">Nome é obrigatório</div>
+                                      <div *ngIf="formSolicitacao.get('nome').errors.minlength">Nome deve ter no mínimo 3 carateres</div>
+                                  </div>
+                                  <div class="col-12 mb-2">
+                                    <input type="email" class="form-control" id="email" formControlName="email" placeholder="Insira seu e-mail">
+                                  </div>
+                                  <div class="alert alert-danger col-11 mb-2 ml-4" *ngIf="formSolicitacao.get('email').invalid && formSolicitacao.get('email').touched">
+                                      <div *ngIf="formSolicitacao.get('email').errors.required">E-mail obrigatório</div>
+                                      <div *ngIf="formSolicitacao.get('email').errors.email">Formato de e-mail inválido</div>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <textarea class="form-control" id="comentario" rows="3" formControlName="comentario" placeholder="Insira um  comentário"></textarea>
+                                </div>
+                                <div class="alert alert-danger col-11 mb-2 ml-4" *ngIf="formSolicitacao.get('comentario').invalid && formSolicitacao.get('comentario').touched">
+                                    <div *ngIf="formSolicitacao.get('comentario').errors.required">Comentário é obrigatório</div>
+                                    <div *ngIf="formSolicitacao.get('comentario').errors.minlength">Comentário deve ter no mínimo 10 caracteres</div>
+                                </div>
+                                <div class="col-4 p-0">
+                                  <button type="button" class="btn btn-warning w-100" [disabled]="formSolicitacao.invalid" (click)="enviarEmprestimo()">Enviar</button>
+                                </div>
+                                </form>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-footer border-0 bg-white text-center" *ngIf="!exibirFormSolicitacao">
+                          <p class="m-0 pb-2">Mínimo de R$ 700 e máximo de R$ 20 mil com taxas a partir de <strong>2,97%</strong></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-0 d-none d-lg-block">
+                  <img src="../assets/celular.png" class="img-fluid">
+                </div>
+              </div>
+  
+            </div>
+  
+          </div>
+  
+          <div class="row ml-0 mr-0 cadastro">
+            <div class="col-12 p-0 text-white text-center">
+              <p>Ainda não é cliente? <a href="#" class="text-white">Clique aqui e cadastre-se</a></p>
+            </div>
+          </div>
+  
+          <div class="row ml-0 mr-0 midpage text-center">
+            <div class="col-12 p-0">
+              <img src="../assets/Group 8.png">
+            </div>
+          </div>
+  
+          <div class="row ml-0 mr-0 como-funciona text-center text-white">
+            <div class="col-12 p-0">
+              <h1>Como funciona?</h1>
+            </div>
+          </div>
+  
+          <div class="row ml-0 mr-0 passos">
+            <div class="col-4">
+              <div class="row m-0">
+                <div class="float-left numero-como-funciona">
+                  1
+                </div>
+                <div class="float-right text-white ml-2 pl-5">
+                  <p>Bora Começar!</p>
+                  <p>Primeiro você vai nos dizer de quanto precisa e nos contar um pouco sobre você.</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-4">
+              <div class="row m-0">
+                <div class="float-left numero-como-funciona">
+                  2
+                </div>
+                <div class="float-right text-white ml-4 pl-5">
+                  <p>É bem rápido</p>
+                  <p>Depois que você enviar seu pedido de empréstimo, sem sair da tela e em poucos minutos, receberá uma resposta.</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-4">
+              <div class="row m-0">
+                <div class="float-left numero-como-funciona">
+                  3
+                </div>
+                <div class="float-right text-white ml-4 pl-5">
+                  <p>Dê o aceite e pronto!</p>
+                  <p>Assim que receber a aprovação final, assine o contrato e logo mais tenha o dinheiro na mão.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+    
+    <div class="row m-0 vantagem align-items-center">
+      <div class="container">
+        <div class="row m-0">
+          <div class="col-4 p-0">
+            <div class="row align-items-center">
+              <div class="align-self-center numero-como-funciona">
+                <img src="../assets/give-money.png" class="align-self-center mb-5">
+              </div>
+              <div class="ml-5 pl-5 mr-5 pr-5">
+                <p>Vantagem 01</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin fringilla, risus vel blandit</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-4 p-0">
+            <div class="row align-items-center">
+              <div class="align-self-center numero-como-funciona">
+                <img src="../assets/give-money.png" class="align-self-center mb-5">
+              </div>
+              <div class="ml-5 pl-5 mr-5 pr-5">
+                <p>Vantagem 02</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin fringilla, risus vel blandit</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-4 p-0">
+            <div class="row align-items-center">
+              <div class="align-self-center numero-como-funciona">
+                <img src="../assets/give-money.png" class="align-self-center mb-5">
+              </div>
+              <div class="ml-5 pl-5 mr-5 pr-5">
+                <p>Vantagem 03</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin fringilla, risus vel blandit</p>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+    </div>
+  
+    <div class="row m-0 align-items-end invista">
+      <div class="container">
+        <div class="col-12 p-0">
+          <div class="row">
+            <div class="col-8">
+              <h2>Bora Investir em você?</h2>
+              <img src="../assets/Group 2.png" class="group">
+              <p>
+                A Avivatec veio para te ajudar quando você mais precisa e ainda facilitar seu dia-a-dia.<br>
+                Todo nosso processo é online. Esquece isso de ir ao banco e toda aquela burocracia... nós cuidamos de tudo para você!<br>
+                Conectamos você com nossos parceiros financeiro, para contratação de empréstimos, sempre buscando as melhores opções de acordo com cada perfil.
+              </p>
+            </div>
+            <div class="col-4">
+              <img src="../assets/rain_money.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row m-0 tudo-online">
+      <div class="col-12 p-0">
+        <div class="container">
+          <h2>É tudo online</h2>
+          <p>Vem cá que te explico melhor.</p>
+          <p>É a contratação de um empréstimo através da internet, de forma simples, rápida e descomplicada. Você preenche o cadastro, recebe a aprovação, assina o contrato de empréstimo e pronto... dinheiro na conta. Tudo isso sem sair de casa. O processo é gratuito e você só paga os juros do empréstimo após efetivar a contratação.</p>
+        </div>
+      </div>
+    </div>
+  
+    <footer class="row m-0 rodape">
+      <div class="container">
+        <div class="col-12 p-0">
+          <div class="row">
+            <div class="col-12">
+              <img src="../assets/avivatec1.png">
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-12 p-0" >
+          <div class="row m-0">
+            
+            <div class="col-3 p-0">
+              <p class="link-rodape"><a href="#">Sobre nós</a></p>
+              <p class="link-rodape"><a href="#" class="link-rodape">Como funciona</a></p>
+              <p class="link-rodape"><a href="#" class="link-rodape">Precisa de ajuda?</a></p>
+            </div>
+            <div class="col-4 p-0">
+              <p class="link-rodape"><a href="#" class="link-rodape">Conheça o emprestimo que oferecemos</a></p>
+              <p class="link-rodape"><a href="#" class="link-rodape">O que é empréstimo online?</a></p>
+              <p class="link-rodape"><a href="#" class="link-rodape">Avaliação de crédito</a></p>
+            </div>
+            <div class="col-2 p-0">
+              <p class="link-rodape"><a href="#" class="link-rodape">Parceiros</a></p>
+            </div>
+            <div class="col-3 p-0 text-white">
+              <p>Entre em contato com a gente!</p>
+              <p><img src="../assets/ico_phone.png" alt="" class="m-0 pr-3">0800 1111 1111</p>
+              <p><img src="../assets/ico_email.png" alt="" class="m-0 pr-3">atendimento@avivatec.com.br</p>
+              <p><img src="../assets/ico_whatsapp.png" alt="" class="m-0 pr-3">(11) 9999 9999</p>
+            </div>
+  
+          </div>
+        </div>
+  
+        <div class="col-12 p-0">
+          <img src="../assets/circle.png" class="mt-1 mb-5">
+        </div>
+  
+        <div class="col-12 p-0 text-white">
+          <p>
+            O site www.avivatec.com.br é de propriedade da XXXXXXXX, CNPJ XXXXXX, com sede no endereço XXXXXXXXXX.<br>
+            Não somos um banco ou uma financeira. Atuamos como Correspondente Bancário nos termos da Resolução nº 3.954 de 24/02/2011 do Banco Central do Brasil.<br>
+            Somos uma plataforma digital que conecta pessoas com parceiros financeiros para efetivação de empréstimos. Toda e qualquer análise de crédito e seus resultados são definidos exclusivamentes pela instituição financeira parceira da BORACRED, com suas respectivas políticas e critérios de concessão.
+            Nosso objetivo é proporcionar ao consumidor a melhor e mais adequada experiência de crédito de acordo com cada perfil, através de um processo 100% online. Ressaltamos que não cobramos nenhum valor de nossos clientes pelos nossos serviços de intermediação.<br>
+            Para entrar em contato ligue para (XX) XXXXXXX, horário de atendimento das XX às XX de segunda a sexta, exceto feriados ou envie um e-mail atendimento@avivatec.com.br.
+          </p>
+        </div>
+  
+        <div class="col-12 p-0">
+          <img src="../assets/circle.png" class="mt-5 pt-3 mb-5">
+        </div>
+  
+        <div class="col-12 p-0">
+          <div class="row m-0">
+            <div class="col-8 p-0">
+              <p class="text-white">© Avivatec - TODOS OS DIREITOS RESERVADOS</p>
+            </div>
+            <div class="col-2 p-0">
+              <p class="link-footer"><a href="#" class="link-footer">Política de Privacidade</a></p>
+            </div>
+            <div class="col-2 p-0 text-right">
+              <p class="link-footer"><a href="#" class="link-footer">Termos de uso</a></p>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </footer>
+    
+    <div class="row m-0 cabecalho-dialogo fixed-top" *ngIf="cabecalho">
+      <div class="col-12 p-0 text-center text-white">
+        <span><img src="../assets/ico_atencao.png" class="pr-2"></span>
+        <span class="text-cabecalho p-0">Não cobramos nehum valor de nossos clientes pelo serviço prestado, portanto NUNCA faça nenhum depósito ou pagamento antecipado para obter seu empréstimo.</span>
+        <button type="button" class="close pull-right text-white mr-4" aria-label="Close" (click)="cabecalho = false">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>  
+  </main>
+  
+  <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px', fullScreenBackdrop: true }"></ngx-loading>

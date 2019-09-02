@@ -1,0 +1,170 @@
+.cabecalho-dialogo {
+    background-color: #EA2B6D;
+    margin-top: -2px;
+}
+
+.cabecalho-dialogo .col-12 {
+    margin-top: 11px;
+    margin-bottom: 11px;
+}
+
+.text-cabecalho {
+    font-size: 16px;
+    font-weight: 210;
+}
+
+.pagina {
+    height: 1400px;
+    background-color: #0c102a;
+}
+
+.nav {
+    margin-top: 100px;
+}
+
+.emprestimo {
+    margin-top: 100px;
+}
+
+.emprestimo-span {
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 100;
+}
+
+.descr-emprestimo {
+    font-size: 15px;
+    margin-top: 40px;
+    color: #9395a1;
+}
+
+
+.quanto-precisa {
+    margin-top: 40px;
+}
+
+.quanto-precisa img {
+    vertical-align: bottom;
+}
+
+.card-quanto-precisa .card-header {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 640;
+}
+
+.preco .card-title {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 645;
+}
+
+.card-footer {
+    color: #a09f9f;
+    font-size: 11px;
+} 
+
+.cadastro {
+    margin-top: 45px;
+}
+
+.midpage {
+    margin-top: 50px;
+}
+
+.como-funciona {
+    margin-top: 50px;
+}
+
+.como-funciona h1 {
+    font-size: 50px;
+}
+
+.numero-como-funciona {
+    font-size: 140px;
+    line-height: 100px;
+    color: #fedd00;
+    position: absolute;
+}
+
+.vantagem {
+    height: 170px;
+    background-color: #fedd00;
+    font-size: 14px;
+}
+
+.vantagem p:first-child {
+    font-weight: 500;
+}
+
+.invista {
+    height: 470px;
+}
+
+.invista h2 {
+    font-size: 50px;
+    margin-top: 80px;
+}
+
+.invista p {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 25px;
+}
+
+.tudo-online {
+    height: 260px;
+    background-color: #fedd00;
+}
+
+.tudo-online h2 {
+    margin-top: 50px;
+    font-size: 32px;
+    font-weight: 440;
+}
+
+.tudo-online p {
+    color: #313131;
+}
+
+.rodape {
+    height: 920px;
+    background-color: #0c102a;
+}
+
+.rodape img:nth-child(1) {
+    margin-top: 110px;
+    margin-bottom: 90px;
+}
+
+.link-rodape {
+    margin-bottom: 30px;
+}
+
+.link-rodape a {
+    color: #aa950e;
+}
+
+.btn-warning {
+    color: #212529;
+    background-color: #fedd00;
+    border-color: #fedd00;
+}
+
+.btn-warning:hover {
+    color: #212529;
+    background-color: #d6c033;
+    border-color: #d6c033;
+} 
+
+.btn-outline-warning {
+    color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-outline-warning:hover {
+    color: #212529;
+    background-color: #fedd00;
+    border-color: #fedd00;
+}

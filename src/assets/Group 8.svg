@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="242px" height="30px" viewBox="0 0 242 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Group 8</title>
+    <desc>Created with Sketch.</desc>
+    <g id="01---Fluxo-Inicial" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="001.1---Home" transform="translate(-599.000000, -938.000000)" fill="#FEDD00">
+            <g id="Group-8" transform="translate(599.000000, 938.000000)">
+                <g id="circles" transform="translate(0.000000, 15.000000)">
+                    <circle id="Oval" cx="1.5" cy="2.5" r="1.5"></circle>
+                    <circle id="Oval-Copy-2" cx="22" cy="2" r="2"></circle>
+                    <circle id="Oval-Copy-3" cx="41.5" cy="2.5" r="1.5"></circle>
+                    <circle id="Oval-Copy-4" cx="62" cy="2" r="2"></circle>
+                </g>
+                <g id="circles-copy" transform="translate(178.000000, 15.000000)">
+                    <circle id="Oval" cx="1.5" cy="2.5" r="1.5"></circle>
+                    <circle id="Oval-Copy-2" cx="22" cy="2" r="2"></circle>
+                    <circle id="Oval-Copy-3" cx="41.5" cy="2.5" r="1.5"></circle>
+                    <circle id="Oval-Copy-4" cx="62" cy="2" r="2"></circle>
+                </g>
+                <g id="mouse" transform="translate(121.000000, 15.000000) scale(-1, 1) translate(-121.000000, -15.000000) translate(112.000000, 0.000000)" fill-rule="nonzero">
+                    <path d="M8.99999997,0 C4.03732429,0 0,3.95851137 0,8.82431027 L0,21.1756897 C0,26.0414886 4.03732429,30 8.99999997,30 C13.9626757,30 18,26.0414886 18,21.1756897 L18,8.82431027 C18,3.95851137 13.9626757,0 8.99999997,0 Z M16.1642372,21.1756897 C16.1642372,25.0488281 12.9502516,28.2000732 8.99999997,28.2000732 C5.0497484,28.2000732 1.83576283,25.0488281 1.83576283,21.1756897 L1.83576283,8.82431027 C1.83576283,4.95117188 5.0497484,1.79992676 8.99999997,1.79992676 C12.9502516,1.79992676 16.1642372,4.95117188 16.1642372,8.82431027 L16.1642372,21.1756897 Z" id="Shape"></path>
+                    <path d="M9,6 C8.44760936,6 8,6.40674832 8,6.90871279 L8,11.0912873 C8,11.5930206 8.44760936,12 9,12 C9.55213633,12 10,11.5930206 10,11.0912873 L10,6.90871279 C10,6.40674832 9.55239064,6 9,6 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
